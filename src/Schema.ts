@@ -1,7 +1,7 @@
 import { schemas } from './data';
 
 export class Schema {
-    get schema() {
+    get schema() {  
         return schemas[this.constructor.name]
     }
 }

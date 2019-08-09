@@ -3,7 +3,9 @@ import { Schema } from '../src/Schema';
 
 describe('test', function() {
 
-    @schema()
+    class Tmp {}
+
+    @schema(Tmp)
     class Test extends Schema {
 
         @prop() 

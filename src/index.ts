@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import SimpleSchema from 'simpl-schema';
-import { schemas } from './data';
+import { schemas, collections } from './data';
 
 export function prop(opts = {}) {
     return (target: any, key: string) => {
@@ -20,9 +20,10 @@ export function prop(opts = {}) {
     };
 }
 
-export function schema() {
+export function schema(collection) {
   return function(constructor) {
     const name = constructor.name;
     schemas[name] = new SimpleSchema(schemas[name]);
+    connections[name] = collection;
   }
 }
