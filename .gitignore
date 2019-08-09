@@ -12,3 +12,4 @@ test/config.json
 doc/
 
 node_modules
+.nyc_output
