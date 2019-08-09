@@ -20,7 +20,9 @@ export function prop(opts = {}) {
     };
 }
 
-export function getSchema(obj) {
-  const name = obj.name;
-  return new SimpleSchema(schemas[name]);
+export function schema() {
+  return function(constructor) {
+    const name = constructor.name;
+    schemas[name] = new SimpleSchema(schemas[name]);
+  }
 }
