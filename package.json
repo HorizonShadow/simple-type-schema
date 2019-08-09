@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/meteor": "^1.4.29",
     "simpl-schema": "^1.5.5",
     "ts-node": "^8.3.0"
   },
